@@ -1,0 +1,93 @@
+[
+{
+  "model": "catalog.product",
+  "pk": 11,
+  "fields": {
+    "name": "Ноутбук Lenovo",
+    "description": "Идеальный для работы и учебы",
+    "image": "",
+    "category": 12,
+    "price": "45999.99",
+    "created_at": "2026-01-16T20:04:50.404Z",
+    "updated_at": "2026-01-16T20:04:50.404Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 12,
+  "fields": {
+    "name": "Смартфон iPhone",
+    "description": "Последняя модель",
+    "image": "",
+    "category": 12,
+    "price": "89999.99",
+    "created_at": "2026-01-16T20:04:50.408Z",
+    "updated_at": "2026-01-16T20:04:50.408Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 13,
+  "fields": {
+    "name": "Джинсы",
+    "description": "Классические синие джинсы",
+    "image": "",
+    "category": 11,
+    "price": "3499.99",
+    "created_at": "2026-01-16T20:04:50.412Z",
+    "updated_at": "2026-01-16T20:04:50.412Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 14,
+  "fields": {
+    "name": "Книга \"Python Cookbook\"",
+    "description": "Рецепты программирования на Python",
+    "image": "",
+    "category": 10,
+    "price": "2499.99",
+    "created_at": "2026-01-16T20:04:50.416Z",
+    "updated_at": "2026-01-16T20:04:50.416Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 15,
+  "fields": {
+    "name": "Набор посуды",
+    "description": "Кухонная посуда 12 предметов",
+    "image": "",
+    "category": 13,
+    "price": "12999.99",
+    "created_at": "2026-01-16T20:04:50.420Z",
+    "updated_at": "2026-01-16T20:04:50.420Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 16,
+  "fields": {
+    "name": "Велосипед",
+    "description": "Горный велосипед 21 скорость",
+    "image": "",
+    "category": 9,
+    "price": "25999.99",
+    "created_at": "2026-01-16T20:04:50.424Z",
+    "updated_at": "2026-01-16T20:04:50.424Z"
+  }
+},
+{
+  "model": "catalog.product",
+  "pk": 17,
+  "fields": {
+    "name": "Чайник",
+    "description": "Электрический чайник",
+    "image": "",
+    "category": 14,
+    "price": "2499.99",
+    "created_at": "2026-01-16T20:20:31.092Z",
+    "updated_at": "2026-01-16T20:20:46.818Z"
+  }
+}
+]
