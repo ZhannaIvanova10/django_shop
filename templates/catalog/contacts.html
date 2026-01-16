@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-12 text-center mb-4">
+        <h1 class="display-4">{{ title }}</h1>
+        <p class="lead">{{ message }}</p>
+    </div>
+</div>
+
+{% if success %}
+<div class="row justify-content-center">
+    <div class="col-lg-6">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <h4 class="alert-heading">Успешно!</h4>
+            <p>Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.</p>
+        </div>
+        <div class="text-center mt-4">
+            <a href="{% url 'home' %}" class="btn btn-primary">
+                <i class="bi bi-house"></i> Вернуться на главную
+            </a>
+        </div>
+    </div>
+</div>
+
+{% else %}
+<div class="row">
+    <div class="col-lg-5 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h3 class="card-title">Наши контакты</h3>
+                
+                <div class="mt-4">
+                    <h5><i class="bi bi-geo-alt text-primary me-2"></i> Адрес</h5>
+                    <p>г. Москва, ул. Примерная, д. 123</p>
+                    
+                    <h5><i class="bi bi-telephone text-success me-2"></i> Телефоны</h5>
+                    <p>+7 (999) 123-45-67<br>+7 (495) 765-43-21</p>
+                    
+                    <h5><i class="bi bi-envelope text-warning me-2"></i> Email</h5>
+                    <p>info@shop.ru<br>support@shop.ru</p>
+                    <h5><i class="bi bi-clock text-info me-2"></i> Время работы</h5>
+                    <p>Пн-Пт: 9:00 - 21:00<br>Сб-Вс: 10:00 - 20:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-7">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Обратная связь</h3>
+                <p class="text-muted">Заполните форму и мы свяжемся с вами</p>
+                
+                <form method="post">
+                    {% csrf_token %}
+                    
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="name" class="form-label">Ваше имя *</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="phone" class="form-label">Телефон *</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Сообщение *</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg">
+                        <i class="bi bi-send"></i> Отправить сообщение
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endblock %}
